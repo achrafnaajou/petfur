@@ -1,0 +1,18 @@
+<div class="home-collection">
+    <div class="categories">
+      <span class="active">NEW ARRIVALS</span>
+      <span>SPIRAL BINDING</span>
+      <span>BEST SELLER</span>
+    </div>
+  
+    <div class="grid-container">
+      <div class="book-card" *ngFor="let book of books">
+        <img [src]="book.image" [alt]="book.title" />
+        <p>{{ book.title }}</p>
+        <strong>{{ book.price }}</strong>
+      </div>
+    </div>
+  
+    <button class="read-more">READ MORE</button>
+  </div>
+  

@@ -1,0 +1,87 @@
+.slider {
+    position: absolute;
+    width: 100%;
+    max-width: 1290px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(39, 1, 255, 0.991);
+    top: 80px; /* Ajuste selon la hauteur de la navbar */
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 150px;
+    background: linear-gradient(150deg, #06d914, #091be6);
+ 
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    
+  }
+  
+  .ghost {
+    width: 750px;
+    
+  }
+  
+  .text {
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 28px;   
+   font-weight: 400;
+    color: #ff0000;
+  }
+  
+  .btn {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    font-size: 21px;
+    cursor: pointer;
+    border-radius: 50px;
+    font-weight: 200;
+  }
+  
+  .btn:hover {
+    background: #00e1ff;
+  }
+  
+ 
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(100, 115, 6);
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background: rgba(252, 96, 0, 0.6);
+  }
+  
