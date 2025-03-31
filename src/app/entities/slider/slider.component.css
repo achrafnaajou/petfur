@@ -1,87 +1,116 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .slider {
-    position: absolute;
-    width: 100%;
-    max-width: 1290px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(39, 1, 255, 0.991);
-    top: 80px; /* Ajuste selon la hauteur de la navbar */
-  }
+  position: relative; /* On enlève absolute */
+  width: 100%;
+  max-width: 1290px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: -45px auto 0; /* Ajoute un espace sous la navbar */
   
-  .slide {
-    display: none;
-    width: 100%;
-    text-align: center;
-    padding: 150px;
-    background: linear-gradient(150deg, #06d914, #091be6);
- 
-  }
+}
+
+.slider::before ,  .slider::after{
+  content: '';
+  position: absolute;
+  top: -3.5px;
+  clip-path: polygon(
+    0% 50%, 5% 60%, 10% 70%, 15% 80%, 20% 85%, 
+    25% 90%, 30% 92%, 35% 95%, 40% 97%, 45% 98%, 
+    50% 100%, 55% 98%, 60% 97%, 65% 95%, 70% 92%, 
+    75% 90%, 80% 85%, 85% 80%, 90% 70%, 95% 60%, 
+    100% 50%
+  );
+  left: 0;
+  width: 100%;
+  height: 50px; /* Hauteur de la bordure en zigzag */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: #f8f9fa; /* Couleur de la bordure */
+
+}
+
+
+
+
+
+.slide {
+  display: none;
+  width: 100%;
+  text-align: center;
+  padding: 22px;
   
-  .slide.active {
-    display: block;
-  }
+}
+
+
+.slide.active {
+  display: block;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ghost {
+  width: 750px;
+}
+
+.text {
+  text-align: center;
   
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-    
-  }
-  
-  .ghost {
-    width: 750px;
-    
-  }
-  
-  .text {
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 28px;   
-   font-weight: 400;
-    color: #ff0000;
-  }
-  
-  .btn {
-    background: #ff6600;
-    color: white;
-    border: none;
-    padding: 9px 15px;
-    font-size: 21px;
-    cursor: pointer;
-    border-radius: 50px;
-    font-weight: 200;
-  }
-  
-  .btn:hover {
-    background: #00e1ff;
-  }
-  
- 
-  
-  .prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgb(100, 115, 6);
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    font-size: 25px;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  .prev:hover, .next:hover {
-    background: rgba(252, 96, 0, 0.6);
-  }
-  
+
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #ff0000;
+}
+
+.btn {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 9px 15px;
+  font-size: 21px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: 200;
+}
+
+.btn:hover {
+  background: #00e1ff;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(100, 115, 6, 0);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 13px;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  background:#e0574d89;
+  border-radius: 100%;
+}

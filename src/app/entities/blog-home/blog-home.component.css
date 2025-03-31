@@ -1,0 +1,59 @@
+.blog-section {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  
+  .blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .blog-card {
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .blog-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .blog-card img:hover {
+    transform: scale(1.05);
+  }
+  
+  .blog-card h3 {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  .read-more {
+    display: flex;
+    margin-top: 20px;
+    padding: 2px 8px;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease-in-out;
+    margin-left: 46%;
+    border-radius: 9px;
+    color: grey;
+  }
+  
+  .read-more:hover {
+    background-color: black;
+    color: white;
+  }
+  

@@ -1,0 +1,59 @@
+.social-media-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: white;
+    
+  }
+  
+  .content {
+    
+    max-width: 500px;
+   
+  }
+  
+  .brand-name {
+    color: #e0584d;
+    font-weight: bold;
+    font-size: 23px;
+    text-transform: lowercase;
+    margin-left: -250px;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: -250px;
+  }
+  
+  p {
+    color: #555;
+    font-size: 1rem;
+    margin-left: -250px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    margin-left: -250px;
+  }
+  
+  .social-icons a {
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #e0584d;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+  }
+  

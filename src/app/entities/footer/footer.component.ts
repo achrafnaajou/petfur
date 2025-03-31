@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+  email: string = '';
 
+  subscribe() {
+    if (this.email) {
+      console.log('Subscribed with email:', this.email);
+      alert('Thank you for subscribing!');
+      this.email = ''; // Réinitialisation du champ après l'inscription
+    }
+  }
 }
+

@@ -1,12 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ElementRef, } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-nav',
-  standalone: true,
-  imports: [],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css'
+  standalone:true,
+  styleUrls: ['./nav.component.css']
 })
-export class NavComponent {
+export class NavComponent  {
+  private lastScrollTop = 0;
 
+  constructor(private el: ElementRef) {}
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const header = this.el.nativeElement.querySelector('.header');
+    const scrollTop = window.scrollY;
+
+    if (scrollTop > this.lastScrollTop && scrollTop > 50) {
+      // Si on scroll vers le bas → cacher le header
+      header.classList.add('hidden-header');
+    } else {
+      // Si on scroll vers le haut → réafficher le header
+      header.classList.remove('hidden-header');
+    }
+
+    this.lastScrollTop = scrollTop;
+  }
 }

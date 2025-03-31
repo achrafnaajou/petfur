@@ -1,88 +1,125 @@
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-  }
-  
+*{
+  font-size: 16px;
+  font-weight: 450;
+  background: #f8f9fa;
  
-  .menu-bar {
-    background-color: #af3c3c;
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    position: fixed;
-  }
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
   
-  .menu-bar ul {
-    list-style: none;
-    display: flex;
-    
-  }
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 80px;
+}
+
+.hidden-header {
+  transform: translateY(-100%);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+ 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   
-  .menu-bar ul li {
-    padding: 10px 30px;
-    position: relative;
-  }
   
-  .menu-bar ul li a {
-    font-size: 20px;
-    color: #fdfffc;
-    text-decoration: none;  
-   
-    font-weight: 150;
-  }
+}
+
+
+
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+.dropend:hover > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+/* Effet hover sur l'élément */
+                              
+.dropdown-item {
+  position: relative;
+  padding-bottom: 10px;
+  transition: color 0.3s ease-in-out;
   
-  .menu-bar ul li a:hover {
-    color: #0073ff;
-  }
+}
+
+.dropdown-item::after {
+  content: "";
+  display: block;
+  width: 80%;
+  margin: 5px auto;
+  height: 1px;
+  background: linear-gradient(to right, #e0584d, transparent);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Effet hover sur l'élément */
+.dropdown-item:hover {
+  color: #e0584d; /* Couleur du texte au survol */
+}
+
+/* Effet hover sur le divider */
+.dropdown-item:hover::after {
+  background: linear-gradient(to right, #e0584d, transparent);
+}
+
+.nav-link:hover {
+  color: #e0584d; /* Couleur du texte au survol */
+}
+
+/* Effet hover sur le divider */
+.nav-link:hover::after {
+  background: linear-gradient(to right, #e0584d, transparent);
+}
+
+
+
+
+
+
+
+
+.nav-item {
+  position: relative;
+  padding-bottom: 10px;
+  transition: color 0.3s ease-in-out;
   
-  .fas {
-    float: right;
-    margin-left: 10px;
-    padding-top: 5px;
-  }
-  
-  /* dropdown menu style */
-  .dropdown-menu {
-    display: none;
-  }
-  .menu-bar ul li:hover .dropdown-menu {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: #af3c3c;
-  }
-  .menu-bar ul li:hover .dropdown-menu ul {
-    display: block;
-    margin: 5px;
-  }
-  .menu-bar ul li:hover .dropdown-menu ul li {
-    width: 150px;
-    padding: 20px;
-  }
-  .dropdown-menu-1 {
-    display: none;
-  }
-  .dropdown-menu ul li:hover .dropdown-menu-1 {
-    display: block;
-    position: absolute;
-    width: 125px;
-    left: 155px;
-    top: 22px;
-    background-color: #7464af;
-  }
-  
-  .hero {
-    height: calc(100vh - 80px);
-    background-position: center;
-    
-  }
-  
+}
+
+.nav-item::after {
+  content: "";
+  display: block;
+  width: 80%;
+  margin: 5px auto;
+  height: 1px;
+  background: linear-gradient(to right, #e0584d, transparent);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Effet hover sur l'élément */
+.nav-item:hover {
+  color: #e0584d; /* Couleur du texte au survol */
+}
+
+/* Effet hover sur le divider */
+.nav-item:hover::after {
+  background: linear-gradient(to right, #e0584d, transparent);
+}
+
+
+
+
+
+
+
+
+
+

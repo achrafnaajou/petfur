@@ -1,1 +1,16 @@
-<p>blog works!</p>
+<div class="tutorial p-0" *ngFor="let tutorial of tutorials">
+    <div class="tutorial-left">
+        <img [src]="tutorial.image" [alt]="tutorial.title" class="tutorial-image">
+    </div>
+    <div class="tutorial-right">
+        <h2>{{ tutorial.title }}</h2>
+        <p class="description">
+            {{ tutorial.description }}
+        </p>
+        <ul class="colors">
+            <li *ngFor="let color of tutorial.colors">{{ color }}</li>
+        </ul>
+        <p class="date">{{ tutorial.date }}</p>
+        <button class="read-more">READ MORE</button>
+        </div>
+</div>

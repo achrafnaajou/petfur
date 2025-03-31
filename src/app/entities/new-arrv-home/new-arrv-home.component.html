@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="grid">
+      <div *ngFor="let product of products" class="product-card">
+        <img [src]="product.image" alt="{{product.image}}" class="product-image" />
+        <div class="product-info">
+          <h4 class="product-title">{{ product.title }}</h4>
+          <p class="product-price">{{ product.price | currency:'USD' }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="separator"></div>
+  <!-- Bouton Lire Plus -->
+  <button class="read-more">READ MORE</button>
+
