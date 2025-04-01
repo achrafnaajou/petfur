@@ -5,6 +5,9 @@ import { NewArrvHomeComponent } from './entities/new-arrv-home/new-arrv-home.com
 import { SocialMediaHomeComponent } from './entities/social-media-home/social-media-home.component';
 import { BlogComponent } from './entities/blog/blog.component';
 import { ProduitComponent } from './entities/produit/produit.component';
+import path from 'path';
+import { Component } from '@angular/core';
+import { MenuBlogComponent } from './entities/menu-blog/menu-blog.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -14,6 +17,9 @@ export const routes: Routes = [
     {path:'social-media-home',component:SocialMediaHomeComponent},
     {path:'category',component:CategoryComponent},
     {path:'blog',component:BlogComponent},
-    {path:'produit',component:ProduitComponent}
+    {path:'produit',component:ProduitComponent},
+    { path:'menu-blog/:id' , component:MenuBlogComponent},
+    { path:'produit/:id' , component:ProduitComponent},
+
 ];
 

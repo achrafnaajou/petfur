@@ -1,0 +1,11 @@
+<div class="tutorial p-0" *ngIf="blogDetails">
+    <div class="tutorial-left">
+        <img [src]="blogDetails.image" alt="{{ blogDetails.title }}" class="tutorial-image">
+    </div>
+    <div class="tutorial-right">
+        <h2>{{ blogDetails.title }}</h2>
+        <p class="description">{{ blogDetails.description }}</p>
+        <p class="date">{{ blogDetails.date }}</p>
+        <button class="read-more">READ MORE</button>
+    </div>
+</div>

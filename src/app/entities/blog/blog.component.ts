@@ -1,9 +1,12 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Tutorial } from '../../models/tutorial';
+import { Router } from '@angular/router';
 import { CloudinaryModule } from '@cloudinary/angular-5.x';
-import {fill} from "@cloudinary/url-gen/actions/resize";
 import { Cloudinary } from '@cloudinary/url-gen/index';
+import {fill} from "@cloudinary/url-gen/actions/resize";
+
+
 
 @Component({
   selector: 'app-blog',
@@ -14,10 +17,10 @@ import { Cloudinary } from '@cloudinary/url-gen/index';
   styleUrl: './blog.component.css'
 })
 export class BlogComponent implements OnInit {
-
+constructor(private router:Router){}
  tutorials: Tutorial[] = [
     {
-      id:0,
+      id:1,
       title: 'How to Color: Hologram',
       image: '',
       colors: ['Y030', 'RV030', 'BG', 'YR030', 'V330'],
@@ -26,7 +29,7 @@ export class BlogComponent implements OnInit {
     },
     // Ajoutez d'autres tutoriels ici
     {
-      id:0,
+      id:2,
       title: 'How to Color: Sunset',
       image: '',
       colors: ['R050', 'Y060', 'B080'],
@@ -35,13 +38,20 @@ export class BlogComponent implements OnInit {
     }
   ];
 
-  ngOnInit(): void {
-    const cld = new Cloudinary({
-      cloud:{
-        cloudName:'du1rqxwmr',
-      },
-    })
-    this.tutorials[0].image=cld.image('nf4xlq27ootpu3ukj8gt').resize(fill().width(508).height(681)).toURL();
-  }
+ngOnInit(): void {
+  const cld = new Cloudinary({
+    cloud:{
+      cloudName:'du1rqxwmr',
+    },
+  })
+  this.tutorials[0].image=cld.image('nf4xlq27ootpu3ukj8gt').resize(fill().width(508).height(681)).toURL();
+  this.tutorials[1].image=cld.image('ic5aet7ilrdbqfsgly7e').resize(fill().width(508).height(670)).toURL();
+  
+}
 
+
+
+  navigateToBlog(blogId:number){
+    this.router.navigate(['/menu-blog',blogId])
+  }
 }

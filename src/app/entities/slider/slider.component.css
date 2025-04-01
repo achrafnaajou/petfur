@@ -9,8 +9,8 @@
 
 .slider {
   position: relative; /* On enlève absolute */
-  width: 100%;
-  max-width: 1290px;
+  width: auto;
+  max-width: 100%;
   overflow: hidden;
   border-radius: 10px;
   margin: -45px auto 0; /* Ajoute un espace sous la navbar */
@@ -42,6 +42,7 @@
 
 .slide {
   display: none;
+  position: relative;
   width: 100%;
   text-align: center;
   padding: 22px;
@@ -54,6 +55,7 @@
 }
 
 .content {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +71,7 @@
 
 }
 
-h2 {
+/*h2 {
   font-size: 28px;
   font-weight: 400;
   color: #ff0000;
@@ -88,7 +90,115 @@ h2 {
 
 .btn:hover {
   background: #00e1ff;
+}**/
+
+.content img {
+  width: 1330px; /* Garde l'image responsive */
+  height: 440px;
+  display: block;
 }
+
+.overlay {
+  position: absolute;
+  top: 60%; /* Centre verticalement */
+  left: 50%; /* Centre horizontalement */
+  transform: translate(-50%, -50%); /* Ajuste parfaitement au centre */
+  z-index: 2;
+  color: white;
+}
+
+.overlay h2 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.overlay .btn {
+  background: #3e7d98;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+ 
+}
+
+.overlay .btn:hover {
+  background: #f51303;
+}
+
+
+.overlay-gauche {
+  position: absolute;
+  top: 50%; /* Centre verticalement */
+  left: 70%; /* Centre horizontalement */
+  transform: translate(-50%, -50%); /* Ajuste parfaitement au centre */
+  text-align: center;
+  z-index: 2;
+  color: white;
+  
+}
+
+.overlay-gauche h2 {
+  
+  font-size: 60px;
+  
+  font-weight: 800;
+}
+
+.overlay-gauche .btn {
+  background: rgba(183, 164, 56, 0.801);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+  
+}
+
+.overlay-gauche .btn:hover {
+  background: #f51303;
+}
+
+
+.overlay-droite {
+  position: absolute;
+  top: 45%; /* Centre verticalement */
+  margin-left: 30%; /* Centre horizontalement */
+  transform: translate(-50%, -50%); /* Ajuste parfaitement au centre */
+  z-index: 2;
+  color: white;
+  
+}
+
+.overlay-droite h2 {
+ 
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.overlay-droite .btn {
+  background: #853c2fcc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 25px;
+  font-weight: 400;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+  
+}
+
+.overlay-droite .btn:hover {
+  background: #e0584d;
+}
+
 
 .prev, .next {
   position: absolute;

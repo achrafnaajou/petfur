@@ -1,9 +1,9 @@
-<div class="tutorial p-0" *ngFor="let tutorial of tutorials">
+<div class="tutorial" *ngFor="let tutorial of tutorials" >
     <div class="tutorial-left">
         <img [src]="tutorial.image" [alt]="tutorial.title" class="tutorial-image">
     </div>
     <div class="tutorial-right">
-        <h2>{{ tutorial.title }}</h2>
+        <h1>{{ tutorial.title }}</h1>
         <p class="description">
             {{ tutorial.description }}
         </p>
@@ -11,6 +11,6 @@
             <li *ngFor="let color of tutorial.colors">{{ color }}</li>
         </ul>
         <p class="date">{{ tutorial.date }}</p>
-        <button class="read-more">READ MORE</button>
+        <button (click)="navigateToBlog(tutorial.id)" class="read-more">READ MORE</button>
         </div>
 </div>

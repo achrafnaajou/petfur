@@ -8,9 +8,11 @@
   }
   
   .content {
-    
-    max-width: 500px;
-   
+    display: block; /* Active Flexbox */
+    align-items: center; /* Centre verticalement */
+    justify-content: space-between; /* Espace entre le texte et l'image */
+    width: 75%; /* Prend 75% de la largeur */
+    margin: 0 auto; /* Centre le contenu */
   }
   
   .brand-name {
@@ -18,27 +20,27 @@
     font-weight: bold;
     font-size: 23px;
     text-transform: lowercase;
-    margin-left: -250px;
+   
     margin-bottom: 30px;
   }
   
   h1 {
     font-size: 2rem;
     font-weight: bold;
-    margin-left: -250px;
+    
   }
   
   p {
     color: #555;
     font-size: 1rem;
-    margin-left: -250px;
+   
   }
   
   .social-icons {
     display: flex;
     gap: 15px;
     margin-top: 15px;
-    margin-left: -250px;
+   
   }
   
   .social-icons a {
@@ -51,9 +53,23 @@
     color: #e0584d;
   }
   
+  .text-container {
+    flex: 3; /* Prend 75% de la largeur */
+    text-align: left; /* Alignement normal du texte */
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative; /* Nécessaire pour le positionnement */
+  }
+  
   .image-container img {
     max-width: 100%;
     height: auto;
-    margin-right: 10px;
+    display: block;
+    border: 10px solid white; /* Ajoute une vraie bordure blanche */
+    clip-path: polygon(100% 100%, 0% 100%, 0.00% 15.35%, 2.00% 15.28%, 4.00% 15.07%, 6.00% 14.75%, 8.00% 14.33%, 10.00% 13.86%, 12.00% 13.39%, 14.00% 12.95%, 16.00% 12.58%, 18.00% 12.32%, 20.00% 12.19%, 22.00% 12.20%, 24.00% 12.35%, 26.00% 12.63%, 28.00% 13.02%, 30.00% 13.47%, 32.00% 13.94%, 34.00% 14.40%, 36.00% 14.81%, 38.00% 15.12%, 40.00% 15.30%, 42.00% 15.35%, 44.00% 15.26%, 46.00% 15.03%, 48.00% 14.68%, 50.00% 14.26%, 52.00% 13.78%, 54.00% 13.31%, 56.00% 12.88%, 58.00% 12.53%, 60.00% 12.29%, 62.00% 12.18%, 64.00% 12.22%, 66.00% 12.39%, 68.00% 12.69%, 70.00% 13.09%, 72.00% 13.55%, 74.00% 14.02%, 76.00% 14.48%, 78.00% 14.87%, 80.00% 15.16%, 82.00% 15.32%, 84.00% 15.34%, 86.00% 15.23%, 88.00% 14.98%, 90.00% 14.62%, 92.00% 14.18%, 94.00% 13.70%, 96.00% 13.24%, 98.00% 12.82%, 100.00% 12.48%);
   }
   

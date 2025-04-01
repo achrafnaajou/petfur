@@ -1,5 +1,6 @@
 import { Component, HostListener, ElementRef, } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +11,12 @@ import { isPlatformBrowser } from '@angular/common';
 export class NavComponent  {
   private lastScrollTop = 0;
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef, private router:Router) {}
+   
+  goToUrl(targetRoute: string) {
+    this.router.navigate([targetRoute]);
+  }
+
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
