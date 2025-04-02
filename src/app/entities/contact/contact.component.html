@@ -1,0 +1,43 @@
+<div class="contact-container">
+  <div class="content">
+    <h2><b>CONTACT US</b></h2>
+    <p>Get in Touch – Because Your Pet’s Happiness Matters!</p>
+  </div>
+
+  <div class="form-container">
+    <div class="left-section">
+      <p>
+        We help pet lovers find the best food, health supplies, clothing, and toys for their cats and dogs. Our mission is to provide carefully selected, high-quality products that ensure the happiness, well-being, and comfort of your furry companions."
+        <strong>It’s engaging, clear, and highlights your product range! Let me know if you need any tweaks.</strong>
+      </p>
+      <div class="contact-info">
+        <h2>Contactez-nous</h2>
+        <p><i class="bi bi-telephone"></i> +212 706 296 134</p>
+        <p><i class="bi bi-envelope"></i> joe.com</p>
+
+      </div>
+    </div>
+
+    <div class="separator" data-aos="fade-up"></div>
+
+    <div class="right-section">
+      <form (ngSubmit)="add()">
+        <div class="input-group">
+          <input type="text" placeholder="first name" [(ngModel)]="newContact.firstName" name="firstName" required>
+          <input type="text" placeholder="last name" [(ngModel)]="newContact.lastName" name="lastName" required>
+        </div>
+
+        <div class="input-group">
+          <input type="email" placeholder="mail *" [(ngModel)]="newContact.email" name="email" required>
+          <input type="tel" placeholder="phone" [(ngModel)]="newContact.phone" name="phone" required>
+        </div>
+
+        <div class="input-group">
+          <textarea placeholder="how can we help you ?!..." [(ngModel)]="newContact.message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</div>

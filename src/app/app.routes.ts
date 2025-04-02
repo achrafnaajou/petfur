@@ -8,6 +8,7 @@ import { ProduitComponent } from './entities/produit/produit.component';
 import path from 'path';
 import { Component } from '@angular/core';
 import { MenuBlogComponent } from './entities/menu-blog/menu-blog.component';
+import {ContactComponent} from './entities/contact/contact.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -20,6 +21,7 @@ export const routes: Routes = [
     {path:'produit',component:ProduitComponent},
     { path:'menu-blog/:id' , component:MenuBlogComponent},
     { path:'produit/:id' , component:ProduitComponent},
+  {path:'contact' , component:ContactComponent}
 
 ];
 

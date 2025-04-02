@@ -1,0 +1,213 @@
+.intro-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    transition: background-position 0.5s ease;
+  }
+
+
+  .contact-container {
+    color: white;
+    padding: 2.5%;
+    text-align: left;
+    overflow: hidden;
+
+
+    .content {
+
+     margin-top: -40px;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeIn 1s ease-in-out forwards;
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: clamp(2em, 5vw, 1.55em);
+        font-weight: 300;
+        color:#000000;
+
+        text-align: center;
+      }
+
+      p {
+
+        font-size: clamp(16px, 2vw, 20px);
+        color: rgba(0, 0, 0, 0.49);
+        margin-bottom: 30px;
+        text-align: center;
+      }
+    }
+    .bi {
+      margin-right: 8px; /* Ajoute un petit espace entre l'icône et le texte */
+      color: #e0584d;
+    }
+
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      padding: 2.5%;
+
+
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1.2s ease-in-out 0.5s forwards;
+
+      border: 1px solid #ccc;
+      border-radius: 13px;
+      transition: transform 0.2s ease-in-out;
+      background: rgb(255, 255, 255);
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+
+      .left-section, .right-section {
+        flex: 1;
+        padding: 20px;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-weight: 200;
+        min-width: 280px;
+        margin: auto;
+      }
+
+      .right-section {
+        form {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .input-group {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-bottom: 15px;
+
+
+          input , textarea{
+            font-weight: 200;
+
+            flex: 1;
+            min-width: 140px;
+            padding: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.71);
+            border-radius: 5px;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeInInput 0.8s ease-in-out forwards;
+
+            &:focus {
+              outline: none;
+              border-color: #e0584d;
+            }
+            textarea {
+              height: 120px; /* Ajuste la hauteur de la zone de texte */
+              resize: vertical; /* Permet de redimensionner verticalement */
+            }
+          }
+        }
+
+        .submit-btn {
+          background: #e0584d ;
+          border: none;
+          padding: 12px;
+          color: white;
+          font-size: clamp(14px, 2vw, 16px);
+          border-radius: 5px;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+
+          &:hover {
+
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .form-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 3%;
+      margin-top: 100px;
+    }
+    .submit-btn {
+      padding: 10px;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInInput {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+
+  .contact-info {
+    margin-top: 10px;
+    color: #000000;
+}
+
+.contact-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 9px;
+  color: #e0584d;
+}

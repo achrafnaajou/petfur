@@ -8,6 +8,7 @@ import { FooterComponent } from "./entities/footer/footer.component";
 import { BlogComponent } from "./entities/blog/blog.component";
 import { CloudinaryModule } from '@cloudinary/angular-5.x';
 import { Cloudinary } from '@cloudinary/url-gen/index';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -15,9 +16,9 @@ import { Cloudinary } from '@cloudinary/url-gen/index';
   imports: [RouterOutlet, NavComponent,
      SliderComponent, HomeCollectionComponent,
       FooterComponent, BlogComponent,
-      
 
-      
+
+
     ],
     providers:[CloudinaryModule],
   templateUrl: './app.component.html',
@@ -26,7 +27,7 @@ import { Cloudinary } from '@cloudinary/url-gen/index';
 export class AppComponent implements OnInit {
   title = 'ecom';
 
-  
+
   ngOnInit() {
 
     // Create a Cloudinary instance and set your cloud name.

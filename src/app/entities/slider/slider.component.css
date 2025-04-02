@@ -14,7 +14,7 @@
   overflow: hidden;
   border-radius: 10px;
   margin: -45px auto 0; /* Ajoute un espace sous la navbar */
-  
+
 }
 
 .slider::before ,  .slider::after{
@@ -22,10 +22,10 @@
   position: absolute;
   top: -3.5px;
   clip-path: polygon(
-    0% 50%, 5% 60%, 10% 70%, 15% 80%, 20% 85%, 
-    25% 90%, 30% 92%, 35% 95%, 40% 97%, 45% 98%, 
-    50% 100%, 55% 98%, 60% 97%, 65% 95%, 70% 92%, 
-    75% 90%, 80% 85%, 85% 80%, 90% 70%, 95% 60%, 
+    0% 50%, 5% 60%, 10% 70%, 15% 80%, 20% 85%,
+    25% 90%, 30% 92%, 35% 95%, 40% 97%, 45% 98%,
+    50% 100%, 55% 98%, 60% 97%, 65% 95%, 70% 92%,
+    75% 90%, 80% 85%, 85% 80%, 90% 70%, 95% 60%,
     100% 50%
   );
   left: 0;
@@ -46,7 +46,7 @@
   width: 100%;
   text-align: center;
   padding: 22px;
-  
+
 }
 
 
@@ -67,7 +67,7 @@
 
 .text {
   text-align: center;
-  
+
 
 }
 
@@ -122,7 +122,7 @@
   cursor: pointer;
   border-radius: 8px;
   transition: background 0.3s;
- 
+
 }
 
 .overlay .btn:hover {
@@ -130,25 +130,26 @@
 }
 
 
-.overlay-gauche {
+.overlay-droite {
   position: absolute;
+  width: 60%;
   top: 50%; /* Centre verticalement */
-  left: 70%; /* Centre horizontalement */
+  left: 65%; /* Centre horizontalement */
   transform: translate(-50%, -50%); /* Ajuste parfaitement au centre */
   text-align: center;
   z-index: 2;
   color: white;
-  
+
 }
 
-.overlay-gauche h2 {
-  
+.overlay-droite h2 {
+
   font-size: 60px;
-  
+
   font-weight: 800;
 }
 
-.overlay-gauche .btn {
+.overlay-droite .btn {
   background: rgba(183, 164, 56, 0.801);
   color: white;
   border: none;
@@ -158,31 +159,32 @@
   cursor: pointer;
   border-radius: 8px;
   transition: background 0.3s;
-  
+
 }
 
-.overlay-gauche .btn:hover {
+.overlay-droite .btn:hover {
   background: #f51303;
 }
 
 
-.overlay-droite {
+.overlay-gauche {
   position: absolute;
-  top: 45%; /* Centre verticalement */
-  margin-left: 30%; /* Centre horizontalement */
+  max-width: 40%;
+  top: 40%;/* Centre verticalement */
+  margin-left: 33%; /* Centre horizontalement */
   transform: translate(-50%, -50%); /* Ajuste parfaitement au centre */
   z-index: 2;
   color: white;
-  
+
 }
 
-.overlay-droite h2 {
- 
+.overlay-gauche h2 {
+
   font-size: 60px;
   font-weight: 800;
 }
 
-.overlay-droite .btn {
+.overlay-gauche .btn {
   background: #853c2fcc;
   color: white;
   border: none;
@@ -192,35 +194,35 @@
   cursor: pointer;
   border-radius: 8px;
   transition: background 0.3s;
-  
+
 }
 
-.overlay-droite .btn:hover {
+.overlay-gauche .btn:hover {
   background: #e0584d;
 }
 
 
 .prev, .next {
   position: absolute;
-  top: 50%;
+  top: 52%;
   transform: translateY(-50%);
   background: rgba(100, 115, 6, 0);
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border: none;
-  padding: 13px;
+  padding: 30px;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .prev {
-  left: 10px;
+  left: 20px;
 }
 
 .next {
-  right: 10px;
+  right: 20px;
 }
 
 .prev:hover, .next:hover {
-  background:#e0574d89;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 100%;
 }

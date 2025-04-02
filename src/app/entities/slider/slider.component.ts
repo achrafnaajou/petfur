@@ -21,7 +21,7 @@ export class SliderComponent implements OnInit {
         this.img = cld.image('utd7g19suirph3obyha7').resize(fill().width(250).height(150));
 
         ;
-    
+
   }
 
   prevSlide() {
@@ -36,6 +36,12 @@ export class SliderComponent implements OnInit {
     slides[this.currentSlide].classList.remove('active');
     this.currentSlide = (this.currentSlide + 1) % slides.length;
     slides[this.currentSlide].classList.add('active');
+  }
+
+  startSlider() {
+    setInterval(() => {
+      this.nextSlide();
+    }, 5000); // Change every 5 seconds
   }
 
 }

@@ -17,7 +17,7 @@ import { ProduitModel } from '../../models/produit.model';
 })
 export class ProduitComponent implements OnInit {
   productId!: number;
-  productDetails: any; 
+  productDetails: any;
   products: ProduitModel[] = [
     { id :1,title: 'The Honest Kitchen Whole Food Clusters Whole Grain Chicken & Oat Dry Dog Food, 5 lb Bag', price: 24.49, image: '', description:'hhhhhhhhhhhhhh', si1 : '',si2 : '', si4 : '',si3 : '', },
     {id :2, title: 'The Honest Kitchen Whole Food Clusters Grain Free Beef Dry Dog Food, 5 lb Bag', price: 29.99, image: '', description:'', si1 : '',si2 : '', si4 : '',si3 : '', },
@@ -74,11 +74,11 @@ export class ProduitComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.productId = +params['id']; 
+      this.productId = +params['id'];
       this.loadProductDetails();
     });
 
-    this.initializeProductImages(); 
+    this.initializeProductImages();
   }
 
   initializeProductImages() {
@@ -88,12 +88,12 @@ export class ProduitComponent implements OnInit {
       },
     });
 
-    
+
     const imageNames = [
       'nf4xlq27ootpu3ukj8gt',
       'ic5aet7ilrdbqfsgly7e',
       'xkelrojnxplgglldc8hd',
-      'xkelrojnxplgglldc8hd', 
+      'xkelrojnxplgglldc8hd',
     ];
 
     this.products.forEach((product, index) => {
@@ -116,11 +116,12 @@ export class ProduitComponent implements OnInit {
   });
   }
 
+
   loadProductDetails() {
-   
+
     this.productDetails = this.products.find(product => product.id === this.productId);
 
-   
+
     if (this.productDetails && this.productDetails.image) {
       const cld = new Cloudinary({
         cloud: {
@@ -132,10 +133,10 @@ export class ProduitComponent implements OnInit {
   }
 
   goBack(): void {
-    window.location.href = '/category'; 
+    window.location.href = '/category';
 }
   redirectToAmazon(): void {
-    window.open('https://www.amazon.com', '_blank'); 
+    window.open('https://www.amazon.com', '_blank');
   }
-  
+
 }

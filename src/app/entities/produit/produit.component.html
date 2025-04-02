@@ -2,18 +2,19 @@
     <div class="product-card">
         <img [src]="productDetails.image" alt="{{ productDetails.title }}" class="product-image" />
         <div class="product-details">
-            <h1 class="product-title">{{ productDetails.title }}</h1>
+            <h1 class="product-title" >{{ productDetails.title }}</h1>
             <p class="product-price">${{ productDetails.price.toFixed(2) }}</p>
+          <div class="button-container">
+            <button (click)="goBack()" class="btn btn-back">GO BACK</button>
+            <button (click)="redirectToAmazon()" class="btn btn-amazon">BUY IT FROM AMAZON</button>
+          </div>
             <p class="product-description">
                 {{ productDetails.description }}
             </p>
 
-            <div class="button-container">
-                <button (click)="goBack()" class="btn btn-back">Go Back</button>
-                <button (click)="redirectToAmazon()" class="btn btn-amazon">Buy It From Amazon</button>
-            </div>
+
             <div class="additional-images" *ngIf="productDetails.si1 || productDetails.si2 || productDetails.si3 || productDetails.si4">
-                <h2 class="addi-title">Additional Images</h2>
+
                 <div class="additional-image-container">
                     <img *ngIf="productDetails.si1" [src]="productDetails.si1" alt="Additional Image 1" class="additional-image" />
                     <img *ngIf="productDetails.si2" [src]="productDetails.si2" alt="Additional Image 2" class="additional-image" />
@@ -24,4 +25,3 @@
         </div>
     </div>
 
-  

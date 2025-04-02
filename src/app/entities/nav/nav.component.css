@@ -2,7 +2,7 @@
   font-size: 16px;
   font-weight: 450;
   background: #f8f9fa;
- 
+  cursor: pointer;
 }
 
 .header {
@@ -41,6 +41,7 @@
   position: absolute;
   top: 0;
   left: 100%;
+ 
 }
 /* Effet hover sur l'élément */
                               
@@ -48,6 +49,7 @@
   position: relative;
   padding-bottom: 10px;
   transition: color 0.3s ease-in-out;
+ 
   
 }
 
