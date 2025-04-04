@@ -21,7 +21,7 @@ export class ContactComponent  {
   newContact = new ContactModel()
   constructor(private contactservice : ContactService , private router:Router) {}
 
-  add(){
+  add(){debugger
     this.contactservice.save(this.newContact).subscribe(c =>{
       this.router.navigate(['home'])
     })
