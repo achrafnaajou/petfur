@@ -1,15 +1,35 @@
+
+<nav class="blog-nav">
+  <a
+
+    class="blog-link"
+    [class.active]="activeCategory === 'NEW ARRVS'"
+    (click)="setCategory('NEW ARRVS')">NEW </a>
+  <a
+
+    class="blog-link"
+    [class.active]="activeCategory === 'CAT'"
+    (click)="setCategory('CAT')">CAT</a>
+  <a
+
+    class="blog-link"
+    [class.active]="activeCategory === 'DOG'"
+    (click)="setCategory('DOG')">DOG</a>
+</nav>
+
 <div class="container">
-    <div class="grid">
-      <div *ngFor="let product of products" class="product-card">
-        <img [src]="product.image" alt="{{product.image}}" class="product-image" />
-        <div class="product-info">
-          <h4 class="product-title">{{ product.title }}</h4>
-          <p class="product-price">{{ product.price | currency:'USD' }}</p>
-        </div>
-      </div>
+<div class="grid">
+  <div *ngFor="let product of filteredProducts" class="product-card">
+    <img [src]="product.image" alt="{{product.title}}" class="product-image" />
+    <div class="product-info">
+      <h1 class="product-title">{{ product.title }}</h1>
+      <p class="product-price">{{ product.price | currency:'USD' }}</p>
     </div>
+  </div>
+</div>
+
     <button class="read-more">READ MORE</button>
     <div class="separator"></div>
   <!-- Bouton Lire Plus -->
- 
 
+</div>

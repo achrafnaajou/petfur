@@ -18,7 +18,7 @@ export class SliderComponent implements OnInit {
       cloudName:'du1rqxwmr'
     }})
         // Instantiate a CloudinaryImage object for the image with the public ID, 'docs/models'.
-        this.img = cld.image('utd7g19suirph3obyha7').resize(fill().width(250).height(150));
+        this.img = cld.image('utd7g19suirph3obyha7').resize(fill().width(950).height(150));
 
         ;
 

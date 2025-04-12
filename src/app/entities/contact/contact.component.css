@@ -153,8 +153,36 @@
   @media (max-width: 768px) {
     .contact-container {
       padding: 3%;
-      margin-top: 100px;
+
+
     }
+    .content {
+
+
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeIn 1s ease-in-out forwards;
+
+      h2 {
+        margin-bottom: 10px;
+        font-size: clamp(1.8em, 5vw, 1.55em);
+        font-weight: 300;
+        color:#000000;
+margin-top: 30px;
+        text-align: center;
+      }
+
+      p {
+
+        font-size: clamp(16px, 2vw, 20px);
+        color: rgba(0, 0, 0, 0.49);
+        margin-bottom: 30px;
+        text-align: center;
+      }
+    }
+
+
     .submit-btn {
       padding: 10px;
     }

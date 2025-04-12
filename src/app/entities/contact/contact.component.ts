@@ -25,8 +25,9 @@ export class ContactComponent  {
     this.contactservice.save(this.newContact).subscribe(c =>{
       this.router.navigate(['home'])
     })
-
-
   }
+
+
+
 
 }
