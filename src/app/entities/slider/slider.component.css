@@ -170,7 +170,7 @@
 .overlay-gauche {
   position: absolute;
   max-width: 40%;
-  top: 40%;/* Centre verticalement */
+  top: 50%;/* Centre verticalement */
   margin-left: 33%; /* Centre horizontalement */
   transform: translate(-50%, -50%); /* Ajuste parfaitement au centre */
   z-index: 2;
@@ -297,7 +297,7 @@
 
   .content img {
     width: 100%;
-    height: 241px;
+    height:286px;
     display: block;
   }
 
@@ -322,8 +322,8 @@
   }
 
   .overlay-droite {
-    width: 80%;
-    left: 60%;
+    width: 75%;
+    left: 63%;
     transform: translate(-50%, -50%);
     top: 55%;
     text-align: center;
@@ -356,10 +356,21 @@
   }
 
   .prev, .next {
+    position: absolute;
     padding: 15px;
+
+    transform: translateY(-50%);
+    background: rgba(100, 115, 6, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+
+    cursor: pointer;
+
+
     font-size: 16px;
     z-index: 11;
   }
+
 
   .prev {
     left: 10px;
@@ -369,3 +380,6 @@
     right: 10px;
   }
 }
+
+
+
