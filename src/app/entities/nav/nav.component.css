@@ -1,0 +1,190 @@
+*{
+  font-size: 16px;
+  font-weight: 450;
+  background: #f8f9fa;
+  cursor: pointer;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 80px;
+}
+
+.hidden-header {
+  transform: translateY(-100%);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
+.dropend:hover > .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+
+}
+/* Effet hover sur l'élément */
+
+.dropdown-item {
+  position: relative;
+  padding-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+
+
+}
+
+.dropdown-item::after {
+  content: "";
+  display: block;
+  width: 80%;
+  margin: 5px auto;
+  height: 1px;
+  background: linear-gradient(to right, #e0584d, transparent);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Effet hover sur l'élément */
+.dropdown-item:hover {
+  color: #e0584d; /* Couleur du texte au survol */
+}
+
+/* Effet hover sur le divider */
+.dropdown-item:hover::after {
+  background: linear-gradient(to right, #e0584d, transparent);
+}
+
+.nav-link:hover {
+  color: #e0584d; /* Couleur du texte au survol */
+}
+
+/* Effet hover sur le divider */
+.nav-link:hover::after {
+  background: linear-gradient(to right, #e0584d, transparent);
+}
+
+
+
+
+
+
+
+
+.nav-item {
+  position: relative;
+  padding-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+
+}
+
+.nav-item::after {
+  content: "";
+  display: block;
+  width: 80%;
+  margin: 5px auto;
+  height: 1px;
+  background: linear-gradient(to right, #e0584d, transparent);
+  transition: background 0.3s ease-in-out;
+}
+
+/* Effet hover sur l'élément */
+.nav-item:hover {
+  color: #e0584d; /* Couleur du texte au survol */
+}
+
+/* Effet hover sur le divider */
+.nav-item:hover::after {
+  background: linear-gradient(to right, #e0584d, transparent);
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Change en colonne sur mobile */
+        width: 100%; /* Prend toute la largeur */
+        margin-top: 30px;
+
+
+    }
+  .header {
+
+
+
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 60px;
+  }
+
+    .nav-item {
+        width: 100%; /* Les items prennent toute la largeur */
+
+
+        text-align: center; /* Alignement centré pour les items */
+    }
+
+
+}
+
+
+
+
+
+/* Styles pour le bouton de toggler */
+.navbar-toggler {
+  border: none; /* Supprimez la bordure par défaut */
+  background-color: transparent; /* Fond transparent */
+  padding: 10px; /* Ajuster le padding */
+  margin-left: 78%;
+  cursor: pointer; /* Curseur pointer */
+  transition: transform 0.3s; /* Transition pour l'animation */
+}
+
+/* Barres du toggler */
+.navbar-toggler .bar {
+  display: block;
+  width: 35px; /* Largeur des barres */
+  height: 3px; /* Épaisseur des barres */
+  background-color: #e0584d; /* Couleur de la barre */
+  margin: 6px auto; /* Espacement entre les barres */
+  transition: all 0.3s ease; /* Transition fluide */
+}
+
+/* Effet d'animation lors de l'ouverture du menu (inversé) */
+.navbar-toggler:not(.collapsed) .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg); /* Barres se transforme en croix */
+}
+
+.navbar-toggler:not(.collapsed) .bar:nth-child(2) {
+  opacity: 0; /* Invisible au milieu */
+}
+
+.navbar-toggler:not(.collapsed) .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg); /* Barres se transforme en croix */
+}
+
+/* Effectuer un zoom sur le bouton de toggler au survol */
+.navbar-toggler:hover {
+  transform: scale(1.1); /* Légère augmentation de taille au survol */
+}

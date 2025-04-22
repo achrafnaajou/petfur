@@ -1,0 +1,60 @@
+<div class="header">
+  <h2>Welcome</h2>
+  <p>Scroll down to explore the world of dogs and cats !</p>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-light fixed-top" #navbar>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center gap-5 w-100">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" (click)="goToUrl('home')">HOME</a>
+        </li>
+        <li class="nav-item dropdown" (click)="toggleDropdown($event)">
+          <a class="nav-link active" role="button">
+            CATEGORY<i class="bi bi-chevron-down ms-2 mt-1"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="nav-item dropend">
+              <a class="nav-link active mb-2" href="#" role="button">
+                CAT<i class="bi bi-chevron-right ms-2 mt-1"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item mb-2" href="#">TOYS</a></li>
+                <li><a class="dropdown-item mb-2" href="#">FOOD</a></li>
+                <li><a class="dropdown-item mb-2" href="#">HEALTH SUPPLIES</a></li>
+                <li><a class="dropdown-item mb-2" href="#">CLOTHES</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropend">
+              <a class="nav-link active" href="#" role="button">
+                DOG<i class="bi bi-chevron-right mt-1"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item mb-2" href="#">TOYS</a></li>
+                <li><a class="dropdown-item mb-2" href="#">FOOD</a></li>
+                <li><a class="dropdown-item mb-2" href="#">HEALTH SUPPLIES</a></li>
+                <li><a class="dropdown-item mb-2" href="#">CLOTHES</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="goToUrl('blog')">BLOG</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" (click)="goToUrl('contact')">CONTACT US</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
