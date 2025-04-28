@@ -1,27 +1,80 @@
+<!-- 🔹 CONTAINER DU PRODUIT -->
 <div *ngIf="productDetails" class="container">
-    <div class="product-card">
-        <img [src]="productDetails.image" alt="{{ productDetails.title }}" class="product-image" />
-        <div class="product-details">
-            <h1 class="product-title" >{{ productDetails.title }}</h1>
-            <p class="product-price">${{ productDetails.price.toFixed(2) }}</p>
-          <div class="button-container">
-            <button (click)="goBack()" class="btn btn-back">GO BACK</button>
-            <button (click)="redirectToAmazon()" class="btn btn-amazon">BUY IT FROM AMAZON</button>
-          </div>
-            <p class="product-description">
-                {{ productDetails.description }}
-            </p>
+  <div class="product-card">
+    <div class="zoom-view" *ngIf="zoomVisible">
+      <img [src]="productDetails.image" #zoomImgView />
+    </div>
+    <div class="image-container" (mouseleave)="onMouseLeave()">
+      <img [src]="productDetails.image" alt="{{ productDetails.title }}" class="product-image"
+           (mousemove)="onMouseMove($event)"
+           (mouseenter)="zoomVisible = false"
+           #zoomImg />
+    </div>
+    <div class="product-details">
+      <h1 class="product-title">{{ productDetails.title }}</h1>
+      <p class="product-price">${{ productDetails.price.toFixed(2) }}</p>
 
-
-            <div class="additional-images" *ngIf="productDetails.si1 || productDetails.si2 || productDetails.si3 || productDetails.si4">
-
-                <div class="additional-image-container">
-                    <img *ngIf="productDetails.si1" [src]="productDetails.si1" alt="Additional Image 1" class="additional-image" />
-                    <img *ngIf="productDetails.si2" [src]="productDetails.si2" alt="Additional Image 2" class="additional-image" />
-                    <img *ngIf="productDetails.si3" [src]="productDetails.si3" alt="Additional Image 3" class="additional-image" />
-                    <img *ngIf="productDetails.si4" [src]="productDetails.si4" alt="Additional Image 4" class="additional-image" />
-                </div>
-            </div>
+      <div class="button-container">
+        <button (click)="goBack()" class="btn btn-back">GO BACK</button>
+        <button (click)="redirectToAmazon()" class="btn btn-amazon">BUY IT FROM AMAZON</button>
+      </div>
+      <p class="product-description">{{ productDetails.description }}</p>
+      <div class="additional-images" *ngIf="productDetails.si1 || productDetails.si2 || productDetails.si3 || productDetails.si4">
+        <div class="additional-image-container">
+          <img *ngIf="productDetails.si1" [src]="productDetails.si1" alt="Image 1" class="additional-image" (mouseenter)="setMainImage(productDetails.si1)" />
+          <img *ngIf="productDetails.si2" [src]="productDetails.si2" alt="Image 2" class="additional-image" (mouseenter)="setMainImage(productDetails.si2)" />
+          <img *ngIf="productDetails.si3" [src]="productDetails.si3" alt="Image 3" class="additional-image" (mouseenter)="setMainImage(productDetails.si3)" />
+          <img *ngIf="productDetails.si4" [src]="productDetails.si4" alt="Image 4" class="additional-image" (mouseenter)="setMainImage(productDetails.si4)" />
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 CONTAINER DES PRODUITS SUGGÉRÉS -->
+<div class="container suggested-container">
+  <hr />
+  <div class="suggested-products">
+    <h2>Suggested Products</h2>
+    <div class="suggested-grid">
+      <div *ngFor="let product of getSuggestedProducts()" class="suggested-product-card" (click)="navigateToProduct(product.id)">
+        <img [src]="product.image" alt="{{ product.title }}" class="suggested-product-image" />
+        <div class="suggested-product-info">
+          <h3 class="suggested-product-title">{{ product.title }}</h3>
+          <p class="suggested-product-price">{{ product.price | currency:'USD' }}</p>
+        </div>
+      </div>
     </div>
 
+    <!-- Pagination controls -->
+    <div class="pagination-container" *ngIf="getTotalPages() > 0">
+      <!-- Total items display -->
+      <span class="total-items">Total: {{ getTotalItems() }}</span>
+
+      <!-- Previous button -->
+      <button
+        [disabled]="!hasPreviousPage()"
+        (click)="previousPage()"
+        class="pagination-button">
+        &laquo;
+      </button>
+
+      <!-- Page numbers -->
+      <button
+        *ngFor="let page of getPageNumbers()"
+        (click)="goToPage(page)"
+        class="page-number"
+        [class.active]="page === currentPage">
+        {{ page + 1 }}
+      </button>
+
+      <!-- Next button -->
+      <button
+        [disabled]="!hasNextPage()"
+        (click)="nextPage()"
+        class="pagination-button">
+        &raquo;
+      </button>
+    </div>
+  </div>
+</div>

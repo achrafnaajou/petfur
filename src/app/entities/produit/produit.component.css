@@ -181,3 +181,224 @@
     height: 80px;
   }
 }
+.suggested-products {
+  margin-top: 20px;
+  text-align: center;
+
+
+}
+
+.suggested-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 20px; /* Espace entre les cartes */
+}
+
+.suggested-product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Ajustez la largeur comme nécessaire */
+  overflow: hidden;
+  transition: transform 0.2s;
+
+}
+
+.suggested-product-card:hover {
+  transform: scale(1.05); /* Légère augmentation au survol */
+}
+
+.suggested-product-image {
+  width: 100%;
+  height: auto; /* Maintenir le ratio d'aspect */
+}
+
+.suggested-product-info {
+  padding: 10px;
+}
+
+.suggested-product-title {
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.suggested-product-price {
+  font-size: 1.2rem;
+  color: #e0584d;
+  margin-top: 8px;
+}
+
+
+
+
+/* Conteneur principal de la pagination */
+.pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  margin: 0 auto; /* Centré automatiquement */
+}
+
+/* Style du texte "Total: 143" */
+.total-items {
+  font-size: 14px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* Boutons de navigation (< et >) */
+.pagination-button {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.pagination-button:hover {
+  color: #111827;
+}
+
+.pagination-button:disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Style des numéros de page */
+.page-number {
+  border: none;
+  background: transparent;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Page active */
+.page-number.active {
+  background: #e5e7eb;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Effet au survol */
+.page-number:hover {
+  background: #f3f4f6;
+}
+
+/* Style des "..." */
+.dots {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* === MEDIA QUERY POUR LE MOBILE === */
+@media (max-width: 768px) {
+  .pagination-container {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 4px;
+  }
+
+  .total-items {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .pagination-button,
+  .page-number {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+
+  .page-number.active {
+    background: #d1d5db;
+  }
+
+  .dots {
+    font-size: 13px;
+  }
+}
+/* Boutons de navigation (< et >) */
+.pagination-button {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.2s ease-in-out;
+}
+
+.pagination-button:hover {
+  color: #111827;
+}
+
+.pagination-button:disabled {
+  color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Style des numéros de page */
+.page-number {
+  border: none;
+  background: transparent;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Page active */
+.page-number.active {
+  background: #e5e7eb;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Effet au survol */
+.page-number:hover {
+  background: #f3f4f6;
+}
+
+.zoom-view {
+  position: absolute; /* S'assurer que ça superpose l'image */
+  z-index: 10; /* Au-dessus des autres éléments */
+  width: 400px; /* Taille de la vue de zoom */
+  height: 400px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  background: rgba(255, 255, 255, 0.8); /* Ajoute un léger fond pour la clarté */
+  display: flex; /* Centrer l'image */
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; /* Empêche les événements de souris sur la vue de zoom */
+}
+
+.zoom-view img {
+  width: 200%; /* Ajustez cela pour plus ou moins de zoom */
+  height: auto;
+}
+
+.main-image img {
+  width: 300px;
+  height: auto;
+}
+
+
+

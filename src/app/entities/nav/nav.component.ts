@@ -28,6 +28,10 @@ export class NavComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.routerSub?.unsubscribe();
   }
+  
+  navigateToProduit(produitId : number){
+    this.router.navigate(['/produit', produitId])
+  }
 
   goToUrl(targetRoute: string) {
     this.router.navigate([targetRoute]);

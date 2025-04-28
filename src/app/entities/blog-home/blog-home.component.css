@@ -1,43 +1,46 @@
 .blog-section {
-    text-align: center;
-    padding: 50px;
-    background-color: white;
-  }
-
-
-
-
-  .blog-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 16px;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: white;
 }
 
-/* Par défaut, une seule colonne */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Grille responsive fluide */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 44px;
+  gap: 24px;
 }
-
-/* À partir de 640px : 1 carte (optionnel car déjà par défaut, mais tu peux le garder pour clarté) */
-
 
 @media (min-width: 640px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
-
 }
 
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
 .blog-card {
   background: rgba(255, 255, 255, 0.161);
@@ -56,35 +59,26 @@
 .product-image {
   width: 100%;
   height: auto;
-
   object-fit: cover;
-
+  border-radius: 18px 18px 0 0;
 }
-
-
-
 
 .product-title {
   margin-top: 10px;
-  font-size: 1.0rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #333;
 }
 
-
-
-
-
-
 .read-more {
   display: block;
-  margin: 20px auto 0 auto; /* top: 20px, horizontal: auto, bottom: 0 */
-  padding: 6px 16px;
+  margin: 20px auto 0 auto;
+  padding: 8px 20px;
   border: 1px solid black;
   background-color: white;
   cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border-radius: 9px;
   color: grey;
   text-align: center;

@@ -8,4 +8,5 @@ export class ProduitModel{
     si2!:any
     si3!:any
     si4!:any
+  category!:string
 }

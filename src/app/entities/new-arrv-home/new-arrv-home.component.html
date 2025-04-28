@@ -9,17 +9,17 @@
 
     class="blog-link"
     [class.active]="activeCategory === 'CAT'"
-    (click)="setCategory('CAT')">CAT</a>
+    (click)="setCategory('cat')">CAT</a>
   <a
 
     class="blog-link"
     [class.active]="activeCategory === 'DOG'"
-    (click)="setCategory('DOG')">DOG</a>
+    (click)="setCategory('dog')">DOG</a>
 </nav>
 
 <div class="container">
 <div class="grid">
-  <div *ngFor="let product of filteredProducts" class="product-card">
+  <div *ngFor="let product of filteredProducts" (click)="navigateToProduit(product.id)"  class="product-card">
     <img [src]="product.image" alt="{{product.title}}" class="product-image" />
     <div class="product-info">
       <h1 class="product-title">{{ product.title }}</h1>
